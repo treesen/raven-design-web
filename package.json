@@ -5,6 +5,10 @@
   "main": "./dist/raven-design-web.umd.js",
   "style": "./dist/raven-design-web.css",
   "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
