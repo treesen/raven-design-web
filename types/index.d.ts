@@ -1,13 +1,10 @@
-export default class HelloWorld {
-    /** Display value */
-    value: string | number
+import _Vue from "vue";
 
-    /** Maximum value, shows '{max}+' when exceeded. Only works if `value` is a number */
-    max: number
-
-    /** If a little dot is displayed */
-    isDot: boolean
-
-    /** Hidden badge */
-    hidden: boolean
+export class RavenDesign {
+    static install(
+        Vue: typeof _Vue,
+        options: any
+    ): void;
 }
+
+export default RavenDesign
