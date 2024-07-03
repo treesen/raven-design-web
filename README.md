@@ -1,2 +1,2 @@
-# mu-design
-a lib of UI components
+# raven-design-web
+a lib of UI components for web
