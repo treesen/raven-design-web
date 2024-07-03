@@ -2,12 +2,21 @@
   "name": "raven-design-web",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/raven-design-web.common.js",
+  "style": "./dist/raven-design-web.css",
+  "typings": "types/index.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --target lib --name raven-design-web src/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint --fix",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.14"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -18,6 +27,13 @@
     "vuex": "^3.6.2"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.20",
+    "@storybook/addon-interactions": "^7.6.20",
+    "@storybook/addon-links": "^7.6.20",
+    "@storybook/blocks": "^7.6.20",
+    "@storybook/test": "^7.6.20",
+    "@storybook/vue": "^7.6.20",
+    "@storybook/vue-webpack5": "^7.6.20",
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
@@ -37,14 +53,19 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-storybook": "^0.8.0",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
+    "storybook": "^7.6.20",
     "ts-jest": "^27.0.4",
     "typescript": "~4.5.5",
+    "vue-loader": "^15.11.1",
     "vue-template-compiler": "^2.6.14"
   },
   "gitHooks": {
