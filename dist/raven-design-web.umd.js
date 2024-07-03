@@ -2509,7 +2509,9 @@ var component = normalizeComponent(
 ;// CONCATENATED MODULE: ./src/index.ts
 
 /* harmony default export */ var src_0 = ({
-  HelloWorld: components_HelloWorld
+  install: (Vue, opts = {}) => {
+    Vue.component("HelloWorld", components_HelloWorld);
+  }
 });
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 

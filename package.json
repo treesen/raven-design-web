@@ -2,7 +2,7 @@
   "name": "raven-design-web",
   "version": "0.1.0",
   "private": true,
-  "main": "./dist/raven-design-web.common.js",
+  "main": "./dist/raven-design-web.umd.js",
   "style": "./dist/raven-design-web.css",
   "typings": "types/index.d.ts",
   "scripts": {
