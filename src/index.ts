@@ -1,8 +1,8 @@
 import { VueConstructor } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import button from "./components/button/button.vue";
 
 export default {
   install: (Vue: VueConstructor, opts = {}) => {
-    Vue.component("HelloWorld", HelloWorld);
+    Vue.component("raven-button", button);
   },
 };
