@@ -1,0 +1,211 @@
+:root {
+	/* base */
+	--disablePri-fill: #E5E5E5;
+	--disableSec-fill: #E5E5E5;
+	--disableTer-fill: #F5F5F5;
+	--disablePri-shape: #9E9E9E;
+	--disableSec-shape: #B5B5B5;
+	--disableTer-shape: #9E9E9E;
+	--mutedShape: #DDD;
+	--pri-shape: #3C3C3C;
+	--pri-shape-reverse: #FFF;
+	--shape: #000;
+	--shape-reverse: #FFF;
+	--sec-shape: #616E7C;
+	--ident: #8F9BB3;
+	--priHover-fill: #8F9BB3; /*confirm*/
+	--null: #F1F1F1;
+	--shadyGray-shape: #555557;
+	--navyOnBlue: #0058CC;
+	--sneakPeak-shape: rgba(0, 0, 0, 0.30);
+	/* accent */
+	--priAccent-fill: #FAFAFA;
+	--subtleAccent: #F5F5F5;
+	--navyAccent: #80ACE6;
+	--successAccent: #89D226;
+	--selectorAccent: #E4E7EB;
+	--cancelStillAccent: #E0E0E0;
+	--cancelHoverAccent: #8F9BB3;
+	--blueAccent: #B6DFFF;
+	--blueAccent-alt: #E2F2FF;
+	--violetAccent: #F1E3FC;
+	--greenAccent: #DCF2BE;
+	--organgeAccent: #FFDDB3;
+	--yellowAccent: #FEF4C4;
+	--redAccent: #FCE4E2;
+	--grayAccent: #E9E9E9;
+	--attentionAccent: #2671D4;
+	/* familyColor */
+	--ctStill: #0A95FF;
+	--ctHover: #2671D4;
+	--ctActive: #2046A1;
+	--successStill: #04813E;
+	--successHover: #026428;
+	--successActive: #054118;
+	--negativeStill: #E51D0B;
+	--negativeHover: #A51F11;
+	--negativeInverse: #E51D0B;
+	--actionStill: #E1F5FC;
+	--actionHover: #CFEFFA;
+	--actionActive: #CFEFFA;
+	--selectorStill: #F5F5F5;
+	--selectorStill-Shape: #9E9E9E;
+	--selectoHover-Shape: #7C89A3;
+	--selectorActive: #616E7C;
+	--attentionStill: #FFCA2C;
+	--attentionHover: #FFAB04;
+	--attentionActive: #FF8700;
+	--cancelStill: #FFF;
+	--cancelHover: #EBEBEB;
+	--ghostStill: rgba(255, 255, 255, 0.60);
+	--ghostHover: rgba(255, 255, 255, 0.80);
+	--ghostActive: #FFF;
+	--plainStill: #F9F9F9;
+	--plainHover: #F1F1F1;
+	--plainActive: #E9E9E9;
+	--studioShape: #62357E; /*confirm*/
+	/* severity */
+	--sevStandard: #0A95FF;
+	--sevViolet: #8C18E2;
+	--sevGreen: #01A732;
+	--sevGreen-alt: #00DBA9;
+	--sevOrange: #FF8700;
+	--sevYellow: #FFCA2C;
+	--sevRed: #E51D0B;
+	--sevRuby: #B95825;
+	--sevRuby-alt: #AA471B;
+	/* solids */
+	--solid-white: #FFF;
+	--solid-black: #000;
+	--solid-metalic: #8F9BB3;
+	--solid-remark: #7B8794;
+	--solid-pri: #3C3C3C;
+	--solid-sec-shape-light: #CBD2D9;
+	--solidOverlay-white: rgba(255, 255, 255, 0.60);
+	--solid-Gray: #919193;
+	/* backdrops */
+	--contrastBg: #FFF;
+	--subtleBg: #F9F9F9;
+	--lightBg: #FDFDFD;
+	--lightBlue: #F2F7FF;
+	--lightBlueSec: #F6FFFF;
+	--lightStudio: #FBF8FF;
+	--lightGreen: #EEFFE3;
+	--lightOrange: #FFFAF2;
+	--lightYellow: #FFFDF6;
+	--lightRed: #FFFBFB;
+	--lightNavy: #E0EBF9;
+	--lightNight: #F2F7FF;
+	--invertNight: #FFF;
+	--overlayBg: #rgba(0, 0, 0, 0.60);
+	--grayBg: #F0F0F2;
+	--lightGray: #F8F8FA;
+	--gog-grayOnGray: #D5D5D7;
+}
+
+:root.lights-out {
+	/* base */
+	--disablePri-fill: #595959;
+	--disableSec-fill: #000;
+	--disableTer-fill: #777;
+	--disablePri-shape: #2E2E2E;
+	--disableSec-shape: #595959;
+	--disableTer-shape: #C5C5C5;
+	--mutedShape: #424242;
+	--pri-shape: #FFF;
+	--pri-shape-reverse: #3C3C3C;
+	--shape: #FFF;
+	--shape-reverse: #000;
+	--sec-shape: #CBD2D9;
+	--ident: #8F9BB3;
+	--priHover-fill: #363636; /*confirm*/
+	--null: #9E9E9E;
+	--shadyGray-shape: #F0F0F2;
+	--navyOnBlue: #E0EBF9;
+	--sneakPeak-shape: rgba(255, 255, 255, 0.30);
+	/* accent */
+	--priAccent-fill: #272727;
+	--subtleAccent: #2F2F2F;
+	--navyAccent: #2671D4;
+	--successAccent: #89D226;
+	--selectorAccent: #323F4B;
+	--cancelStillAccent: #777777;
+	--cancelHoverAccent: #777777;
+	--blueAccent: #132F85;
+	--blueAccent-alt: #2671D4;
+	--violetAccent: #5C08CF;
+	--greenAccent: #01511B;
+	--organgeAccent: #D84315;
+	--yellowAccent: #F8C417;
+	--redAccent: #97130A;
+	--grayAccent: #616161;
+	--attentionAccent: #C3BFC2;
+	/* familyColor */
+	--ctStill: #77C3FF;
+	--ctHover: #C3E5FF;
+	--ctActive: #2FA5FF;		
+	--successStill: #89D226;
+	--successHover: #59B60D;
+	--successActive: #2F7548;
+	--negativeStill: #ED6154;
+	--negativeHover: #F9958C;
+	--negativeInverse: #FFF;
+	--actionStill: #382932;
+	--actionHover: #564951;
+	--actionActive: #564951;
+	--selectorStill: #272727;
+	--selectorStill-Shape: #777;
+	--selectoHover-Shape: #8F9BB3;
+	--selectorActive: #616E7C;
+	--attentionStill: #FFE083;
+	--attentionHover: #FEF4C4;
+	--attentionActive: #FBDB39;
+	--cancelStill: #1A1A1A;
+	--cancelHover: #363636;
+	--ghostStill: rgba(255, 255, 255, 0.60);
+	--ghostHover: rgba(255, 255, 255, 0.80);
+	--ghostActive: #3C3C3C;
+	--plainStill: #272727;
+	--plainHover: #3E4C59;
+	--plainActive: #323F4B;
+	--studioShape: #F0EAF3; /*confirm*/
+	/* severity */
+	--sevStandard: #77C3FF;
+	--sevViolet: #DDBAF6;
+	--sevGreen: #89D226;
+	--sevGreen-alt: #89D226;
+	--sevOrange: #FF9364;
+	--sevYellow: #FFE083;
+	--sevRed: #E93F30;
+	--sevRuby: #EACDBE;
+	--sevRuby-alt: #FBDB39;
+	/* solids */
+	--solid-white: #FFF;
+	--solid-black: #000;
+	--solid-metalic: #8F9BB3;
+	--solid-remark: #7B8794;
+	--solid-pri: #3C3C3C;
+	--solid-sec-shape-light: #CBD2D9;
+	--solidOverlay-white: rgba(255, 255, 255, 0.60);
+	--solid-Gray: #919193;
+	/* backdrops */
+	--contrastBg: #1A1A1A;
+	--subtleBg: #2E2E2E;
+	--lightBg: #030303;
+	--lightBlue: #03283C;
+	--lightBlueSec: #03283C;
+	--lightStudio: #4F2563;
+	--lightGreen: #03300F;
+	--lightOrange: #482F25;
+	--lightYellow: #554A0A;
+	--lightRed: #4F0402;
+	--lightNavy: #003C6B;
+	--lightNight: #0B2074;
+	--invertNight: #132F85;
+	--overlayBg: #rgba(255, 255, 255, 0.30);
+	--grayBg: #555557;
+	--lightGray: #373739;
+	--gog-grayOnGray: #373739;
+
+}
+
