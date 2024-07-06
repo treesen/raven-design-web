@@ -5,7 +5,7 @@ import "../src/style/index.scss";
 const preview: Preview = {
   parameters: {
     darkMode: {
-      current: 'light',
+      current: 'dark',
       dark: { ...themes.dark, appBg: '#1B1C1D' },
       light: { ...themes.normal, appBg: '#fff' },
       darkClass: 'lights-out',
