@@ -13,7 +13,7 @@
     "build": "vue-cli-service build --target lib --name raven-design-web src/index.ts",
     "lint": "vue-cli-service lint --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build --output-dir docs"
   },
   "peerDependencies": {
     "vue": "^2.6.14"
