@@ -1,5 +1,7 @@
 <template>
-  <div class="raven-btn" @click="onClick">{{ label }}</div>
+  <div :class="['raven-btn', `raven-btn-size-${size}`]" @click="onClick">
+    {{ label }}
+  </div>
 </template>
 
 <script lang="ts">
@@ -12,19 +14,19 @@ export default Vue.extend({
       type: String,
       required: true,
     },
-    primary: {
-      type: Boolean,
-      default: false,
-    },
+    // type: {
+    //   type: String,
+    //   default: 'Clickthrough',
+    //   validator: function (value: string) {
+    //     return ["Clickthrough", "Negative", "Action", "Attention", "Success", "Disabled", "Selector", "Ghost", "Cancel", "No Background"].indexOf(value) !== -1;
+    //   },
+    // },
     size: {
       type: String,
       default: "medium",
       validator: function (value: string) {
-        return ["small", "medium", "large"].indexOf(value) !== -1;
+        return ["tiny", "small", "medium"].indexOf(value) !== -1;
       },
-    },
-    backgroundColor: {
-      type: String,
     },
   },
 

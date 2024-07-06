@@ -3,10 +3,16 @@ import type { StorybookConfig } from "@storybook/vue-webpack5";
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
-    "storybook-dark-mode",
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        backgrounds: false,
+        controls: false,
+      },
+    },
+    "storybook-dark-mode",
   ],
   framework: {
     name: "@storybook/vue-webpack5",

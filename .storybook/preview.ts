@@ -14,12 +14,6 @@ const preview: Preview = {
       classTarget: 'html'
     },
     actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    }
   },
 };
 

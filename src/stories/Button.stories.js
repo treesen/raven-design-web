@@ -14,35 +14,34 @@ export default {
     backgroundColor: { control: "color" },
     size: {
       control: { type: "select" },
-      options: ["small", "medium", "large"],
+      options: ["tiny", "small", "medium"],
     },
   },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
+export const Medium = {
   args: {
-    primary: true,
-    label: "Button",
-  },
-};
-
-export const Secondary = {
-  args: {
-    label: "Button",
-  },
-};
-
-export const Large = {
-  args: {
-    size: "large",
-    label: "Button",
+    size: "medium",
+    label: "Medium",
   },
 };
 
 export const Small = {
   args: {
     size: "small",
-    label: "Button",
+    label: "Small",
   },
 };
+export const Tiny = {
+  args: {
+    size: "tiny",
+    label: "Tiny",
+  },
+};
+
+// export const Accessible = () => <button>Accessible button</button>;
+
+// export const Inaccessible = () => (
+//   <button style={{ backgroundColor: 'red', color: 'darkRed' }}>Inaccessible button</button>
+// );
