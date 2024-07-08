@@ -6,7 +6,7 @@ import "./style/index.scss";
 const components = [Button];
 
 export default {
-  install: (Vue: typeof _Vue, options: PluginOptions): void => {
+  install: (Vue: typeof _Vue, options?: PluginOptions): void => {
     const { prefix } = options || {};
     const libPrefix = prefix || "raven";
 
