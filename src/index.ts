@@ -3,18 +3,18 @@ import { PluginOptions } from "../types/index";
 import Button from "./components/button/button.vue";
 import "./style/index.scss";
 
-const components = [Button];
+const components: Record<string, typeof _Vue> = {
+  Button,
+};
 
 export default {
   install: (Vue: typeof _Vue, options?: PluginOptions): void => {
     const { prefix } = options || {};
     const libPrefix = prefix || "raven";
 
-    components.forEach((component) => {
-      console.log('libPrefix',libPrefix, 'component.name',component.name);
-      
-      // Vue.component(`${libPrefix}-${component.name}`, component);
-      Vue.component(`raven-button`, component);
-    });
+    for (const key in components) {
+      const component = components[key];
+      Vue.component(`${libPrefix}-${key}`, component);
+    }
   },
 };

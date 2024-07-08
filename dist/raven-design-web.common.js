@@ -236,17 +236,19 @@ var component = normalizeComponent(
 ;// CONCATENATED MODULE: ./src/index.ts
 
 
-const components = [button_button];
+const components = {
+  Button: button_button
+};
 /* harmony default export */ var src_0 = ({
   install: (Vue, options) => {
     const {
       prefix
     } = options || {};
     const libPrefix = prefix || "raven";
-    components.forEach(component => {
-      // Vue.component(`${libPrefix}-${component.name}`, component);
-      Vue.component(`raven-button`, component);
-    });
+    for (const key in components) {
+      const component = components[key];
+      Vue.component(`${libPrefix}-${key}`, component);
+    }
   }
 });
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
