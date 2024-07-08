@@ -14,7 +14,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "./src/types/index.d.ts",
+      "./types/index.d.ts",
       "webpack-env"
     ],
     "paths": {

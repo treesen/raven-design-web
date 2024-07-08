@@ -4,10 +4,10 @@
   "private": true,
   "main": "./dist/raven-design-web.umd.js",
   "style": "./dist/raven-design-web.css",
-  "typings": "./src/types/index.d.ts",
+  "typings": "/types/index.d.ts",
   "files": [
     "dist",
-    "./src/types"
+    "types"
   ],
   "scripts": {
     "build": "vue-cli-service build --target lib --name raven-design-web src/index.ts",
