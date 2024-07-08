@@ -238,13 +238,12 @@ var component = normalizeComponent(
 
 const components = [button_button];
 /* harmony default export */ var src_0 = ({
-  install: (Vue, opts) => {
+  install: (Vue, options) => {
     const {
       prefix
-    } = opts || {};
+    } = options || {};
     const libPrefix = prefix || "raven";
     components.forEach(component => {
-      console.log(`${libPrefix}-${component.name}`);
       Vue.component(`${libPrefix}-${component.name}`, component);
     });
   }
