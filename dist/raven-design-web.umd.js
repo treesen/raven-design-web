@@ -286,7 +286,8 @@ const components = [button_button];
     } = options || {};
     const libPrefix = prefix || "raven";
     components.forEach(component => {
-      Vue.component(`${libPrefix}-${component.name}`, component);
+      // Vue.component(`${libPrefix}-${component.name}`, component);
+      Vue.component(`raven-button`, component);
     });
   }
 });
