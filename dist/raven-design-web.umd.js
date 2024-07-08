@@ -105,7 +105,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-85.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=20b96d84
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-85.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=f2332b5a
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -115,7 +115,13 @@ var render = function render() {
     on: {
       "click": _vm.onClick
     }
-  }, [_vm._v(" " + _vm._s(_vm.label) + " ")]);
+  }, [_vm._t("prepend", function () {
+    return [_vm._v(_vm._s(_vm.label))];
+  }), _vm._t("default", function () {
+    return [_vm._v(_vm._s(_vm.label))];
+  }), _vm._t("append", function () {
+    return [_vm._v(_vm._s(_vm.label))];
+  })], 2);
 };
 var staticRenderFns = [];
 
@@ -286,10 +292,10 @@ const components = {
     const {
       prefix
     } = options || {};
-    const libPrefix = prefix || "raven";
+    const libPrefix = prefix || "Raven";
     for (const key in components) {
       const component = components[key];
-      Vue.component(`${libPrefix}-${key}`, component);
+      Vue.component(`${libPrefix}${key}`, component);
     }
   }
 });
