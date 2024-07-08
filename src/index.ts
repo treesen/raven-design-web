@@ -12,8 +12,12 @@ export default {
     const { prefix } = options || {};
     const libPrefix = prefix || "raven";
 
-    components.forEach(component => {
+    for (let index = 0; index < components.length; index++) {
+      const component = components[index];
       Vue.component(`${libPrefix}${component.name}`, component);
-    })
+    }
+    // components.forEach(component => {
+    //   Vue.component(`${libPrefix}${component.name}`, component);
+    // })
   },
 };
