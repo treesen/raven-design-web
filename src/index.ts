@@ -11,6 +11,8 @@ export default {
     const libPrefix = prefix || "raven";
 
     components.forEach((component) => {
+      console.log('libPrefix',libPrefix, 'component.name',component.name);
+      
       // Vue.component(`${libPrefix}-${component.name}`, component);
       Vue.component(`raven-button`, component);
     });
