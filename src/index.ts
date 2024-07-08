@@ -9,8 +9,7 @@ const components: Record<string, typeof _Vue> = {
 
 export default {
   install: (Vue: typeof _Vue, options?: PluginOptions): void => {
-    const { prefix } = options || {};
-    const libPrefix = prefix || "Raven";
+    const libPrefix = options?.prefix || "Raven";
 
     for (const key in components) {
       const component = components[key];
