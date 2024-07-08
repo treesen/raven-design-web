@@ -8,9 +8,12 @@ const components: Record<string, typeof _Vue> = {
 
 export default {
   install: (Vue: typeof _Vue): void => {
+    Vue.component(`RavenButton`, Button);
     for (const key in components) {
       const component = components[key];
       Vue.component(`Raven${key}`, component);
     }
+    
   },
+
 };
