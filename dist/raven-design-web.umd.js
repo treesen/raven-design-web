@@ -105,14 +105,17 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-85.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=b1ec8c88
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-85.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=3e0c3fda
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c,
     _setup = _vm._self._setupProxy;
   return _c('div', {
-    staticClass: "raven-btn"
-  }, [_vm._v("Button")]);
+    class: ['raven-btn', `raven-btn-size-${_vm.size}`],
+    on: {
+      "click": _vm.onClick
+    }
+  }, [_vm._v(" " + _vm._s(_vm.label) + " ")]);
 };
 var staticRenderFns = [];
 
@@ -122,7 +125,32 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js!./node_modules/ts-loader/index.js??clonedRuleSet-86.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=script&lang=ts
 
 /* harmony default export */ var buttonvue_type_script_lang_ts = (external_commonjs_vue_commonjs2_vue_root_Vue_default().extend({
-  name: "raven-button"
+  name: "button",
+  props: {
+    label: {
+      type: String,
+      required: true
+    },
+    // type: {
+    //   type: String,
+    //   default: 'Clickthrough',
+    //   validator: function (value: string) {
+    //     return ["Clickthrough", "Negative", "Action", "Attention", "Success", "Disabled", "Selector", "Ghost", "Cancel", "No Background"].indexOf(value) !== -1;
+    //   },
+    // },
+    size: {
+      type: String,
+      default: "medium",
+      validator: function (value) {
+        return ["tiny", "small", "medium"].indexOf(value) !== -1;
+      }
+    }
+  },
+  methods: {
+    onClick() {
+      this.$emit("onClick");
+    }
+  }
 }));
 ;// CONCATENATED MODULE: ./src/components/button/button.vue?vue&type=script&lang=ts
  /* harmony default export */ var button_buttonvue_type_script_lang_ts = (buttonvue_type_script_lang_ts); 
@@ -250,9 +278,16 @@ var component = normalizeComponent(
 ;// CONCATENATED MODULE: ./src/index.ts
 
 
+const components = [button_button];
 /* harmony default export */ var src_0 = ({
   install: (Vue, opts = {}) => {
-    Vue.component("raven-button", button_button);
+    const {
+      prefix
+    } = opts;
+    const libPrefix = prefix || "raven";
+    components.forEach(component => {
+      Vue.component(`${libPrefix}-${component.name}`, component);
+    });
   }
 });
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js

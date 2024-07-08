@@ -8,7 +8,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "raven-button",
+  name: "button",
   props: {
     label: {
       type: String,
