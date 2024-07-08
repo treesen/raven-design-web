@@ -14,13 +14,26 @@ export default Vue.extend({
       type: String,
       required: true,
     },
-    // type: {
-    //   type: String,
-    //   default: 'Clickthrough',
-    //   validator: function (value: string) {
-    //     return ["Clickthrough", "Negative", "Action", "Attention", "Success", "Disabled", "Selector", "Ghost", "Cancel", "No Background"].indexOf(value) !== -1;
-    //   },
-    // },
+    type: {
+      type: String,
+      default: "clickthrough",
+      validator: function (value: string) {
+        return (
+          [
+            "clickthrough",
+            "negative",
+            "action",
+            "attention",
+            "success",
+            "disabled",
+            "selector",
+            "ghost",
+            "cancel",
+            "no-background",
+          ].indexOf(value) !== -1
+        );
+      },
+    },
     size: {
       type: String,
       default: "medium",
