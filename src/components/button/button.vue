@@ -1,6 +1,8 @@
 <template>
   <div :class="['raven-btn', `raven-btn-size-${size}`]" @click="onClick">
-    {{ label }}
+    <slot name="prepend">{{ label }}</slot>
+    <slot>{{ label }}</slot>
+    <slot name="append">{{ label }}</slot>
   </div>
 </template>
 
