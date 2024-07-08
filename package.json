@@ -4,7 +4,7 @@
   "private": true,
   "main": "./dist/raven-design-web.umd.js",
   "style": "./dist/raven-design-web.css",
-  "typings": "/types/index.d.ts",
+  "typings": "./types/index.d.ts",
   "files": [
     "dist",
     "types"
