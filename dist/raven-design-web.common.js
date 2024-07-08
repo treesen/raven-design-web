@@ -63,7 +63,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=3e0c3fda
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=3ce773fa
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c,
@@ -83,7 +83,7 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js!./node_modules/ts-loader/index.js??clonedRuleSet-41.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=script&lang=ts
 
 /* harmony default export */ var buttonvue_type_script_lang_ts = (external_commonjs_vue_commonjs2_vue_root_Vue_default().extend({
-  name: "button",
+  name: "Button",
   props: {
     label: {
       type: String,
@@ -238,12 +238,13 @@ var component = normalizeComponent(
 
 const components = [button_button];
 /* harmony default export */ var src_0 = ({
-  install: (Vue, opts = {}) => {
+  install: (Vue, opts) => {
     const {
       prefix
-    } = opts;
+    } = opts || {};
     const libPrefix = prefix || "raven";
     components.forEach(component => {
+      console.log(`${libPrefix}-${component.name}`);
       Vue.component(`${libPrefix}-${component.name}`, component);
     });
   }
