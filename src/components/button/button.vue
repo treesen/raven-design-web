@@ -10,7 +10,7 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "Button",
+  name: "raven-button",
   props: {
     label: {
       type: String,
