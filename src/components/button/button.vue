@@ -1,9 +1,35 @@
 <template>
-  <div :class="['raven-btn', `raven-btn-size-${size}`]" @click="onClick">
-    <slot name="prepend">{{ label }}</slot>
+  <a
+    v-if="href"
+    v-bind="$attrs"
+    :href="computedHref"
+    :disabled="disabled"
+    :class="[
+      'raven-btn',
+      `raven-btn-size-${size}`,
+      `raven-btn-variant-${variant}`,
+      { 'raven-btn-rounded': rounded, 'raven-btn-active': active },
+    ]"
+  >
+    <slot name="prepend"></slot>
     <slot>{{ label }}</slot>
-    <slot name="append">{{ label }}</slot>
-  </div>
+    <slot name="append"></slot>
+  </a>
+  <button
+    v-else
+    v-bind="$attrs"
+    :disabled="disabled"
+    :class="[
+      'raven-btn',
+      `raven-btn-size-${size}`,
+      `raven-btn-variant-${variant}`,
+      { 'raven-btn-rounded': rounded, 'raven-btn-active': active },
+    ]"
+  >
+    <slot name="prepend"></slot>
+    <slot>{{ label }}</slot>
+    <slot name="append"></slot>
+  </button>
 </template>
 
 <script lang="ts">
@@ -14,9 +40,8 @@ export default Vue.extend({
   props: {
     label: {
       type: String,
-      required: true,
     },
-    type: {
+    variant: {
       type: String,
       default: "clickthrough",
       validator: function (value: string) {
@@ -24,14 +49,13 @@ export default Vue.extend({
           [
             "clickthrough",
             "negative",
-            "action",
             "attention",
             "success",
-            "disabled",
-            "selector",
             "ghost",
-            "cancel",
             "no-background",
+            "cancel",
+            "action",
+            "selector",
           ].indexOf(value) !== -1
         );
       },
@@ -43,11 +67,25 @@ export default Vue.extend({
         return ["tiny", "small", "medium"].indexOf(value) !== -1;
       },
     },
+    rounded: {
+      type: Boolean,
+    },
+    active: {
+      type: Boolean,
+    },
+    disabled: {
+      type: Boolean,
+    },
+    loading: {
+      type: Boolean,
+    },
+    href: {
+      type: String,
+    },
   },
-
-  methods: {
-    onClick() {
-      this.$emit("onClick");
+  computed: {
+    computedHref() {
+      return this.disabled || this.loading ? undefined : this.href;
     },
   },
 });

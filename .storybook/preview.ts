@@ -13,7 +13,6 @@ const preview: Preview = {
       stylePreview: true,
       classTarget: 'html'
     },
-    actions: { argTypesRegex: "^on[A-Z].*" },
   },
 };
 

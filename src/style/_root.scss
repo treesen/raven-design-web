@@ -1,5 +1,6 @@
 :root {
 	/* base */
+	--transparent: transparent;
 	--disablePri-fill: #E5E5E5;
 	--disableSec-fill: #E5E5E5;
 	--disableTer-fill: #F5F5F5;
@@ -20,6 +21,7 @@
 	--sneakPeak-shape: rgba(0, 0, 0, 0.30);
 	/* accent */
 	--priAccent-fill: #FAFAFA;
+	--actionAccent: #2671D4;
 	--subtleAccent: #F5F5F5;
 	--navyAccent: #80ACE6;
 	--successAccent: #89D226;
@@ -125,6 +127,7 @@
 	--sneakPeak-shape: rgba(255, 255, 255, 0.30);
 	/* accent */
 	--priAccent-fill: #272727;
+	--actionAccent: #2671D4;
 	--subtleAccent: #2F2F2F;
 	--navyAccent: #2671D4;
 	--successAccent: #89D226;

@@ -1,15 +1,16 @@
 import type { StorybookConfig } from "@storybook/vue-webpack5";
 
 const config: StorybookConfig = {
+  staticDirs: [{from: '../src/fonts', to: '/fonts'},{from: '../src/stories/assets', to: '/assets'}],
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-interactions",
+    // "@storybook/addon-interactions",
     {
       name: '@storybook/addon-essentials',
       options: {
         backgrounds: false,
-        controls: false,
+        actions: false,
       },
     },
     "storybook-dark-mode",

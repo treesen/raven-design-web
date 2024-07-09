@@ -63,43 +63,35 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??ruleSet[1].rules[4]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=f2332b5a
-var render = function render() {
-  var _vm = this,
-    _c = _vm._self._c,
-    _setup = _vm._self._setupProxy;
-  return _c('div', {
-    class: ['raven-btn', `raven-btn-size-${_vm.size}`],
-    on: {
-      "click": _vm.onClick
-    }
-  }, [_vm._t("prepend", function () {
-    return [_vm._v(_vm._s(_vm.label))];
-  }), _vm._t("default", function () {
-    return [_vm._v(_vm._s(_vm.label))];
-  }), _vm._t("append", function () {
-    return [_vm._v(_vm._s(_vm.label))];
-  })], 2);
-};
-var staticRenderFns = [];
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/Button.vue?vue&type=template&id=1e527098
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.href)?_c('a',_vm._b({class:[
+    'raven-btn',
+    ("raven-btn-size-" + _vm.size),
+    ("raven-btn-variant-" + _vm.variant),
+    { 'raven-btn-rounded': _vm.rounded, 'raven-btn-active': _vm.active } ],attrs:{"href":_vm.computedHref,"disabled":_vm.disabled}},'a',_vm.$attrs,false),[_vm._t("prepend"),_vm._t("default",function(){return [_vm._v(_vm._s(_vm.label))]}),_vm._t("append")],2):_c('button',_vm._b({class:[
+    'raven-btn',
+    ("raven-btn-size-" + _vm.size),
+    ("raven-btn-variant-" + _vm.variant),
+    { 'raven-btn-rounded': _vm.rounded, 'raven-btn-active': _vm.active } ],attrs:{"disabled":_vm.disabled}},'button',_vm.$attrs,false),[_vm._t("prepend"),_vm._t("default",function(){return [_vm._v(_vm._s(_vm.label))]}),_vm._t("append")],2)}
+var staticRenderFns = []
+
 
 ;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js!./node_modules/ts-loader/index.js??clonedRuleSet-41.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=script&lang=ts
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/@vue/cli-plugin-typescript/node_modules/babel-loader/lib/index.js!./node_modules/ts-loader/index.js??clonedRuleSet-41.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/Button.vue?vue&type=script&lang=ts
 
-/* harmony default export */ var buttonvue_type_script_lang_ts = (external_commonjs_vue_commonjs2_vue_root_Vue_default().extend({
+/* harmony default export */ var Buttonvue_type_script_lang_ts = (external_commonjs_vue_commonjs2_vue_root_Vue_default().extend({
   name: "Button",
   props: {
     label: {
-      type: String,
-      required: true
+      type: String
     },
-    type: {
+    variant: {
       type: String,
       default: "clickthrough",
       validator: function (value) {
-        return ["clickthrough", "negative", "action", "attention", "success", "disabled", "selector", "ghost", "cancel", "no-background"].indexOf(value) !== -1;
+        return ["clickthrough", "negative", "attention", "success", "ghost", "no-background", "cancel", "action", "selector"].indexOf(value) !== -1;
       }
     },
     size: {
@@ -108,16 +100,31 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
       validator: function (value) {
         return ["tiny", "small", "medium"].indexOf(value) !== -1;
       }
+    },
+    rounded: {
+      type: Boolean
+    },
+    active: {
+      type: Boolean
+    },
+    disabled: {
+      type: Boolean
+    },
+    loading: {
+      type: Boolean
+    },
+    href: {
+      type: String
     }
   },
-  methods: {
-    onClick() {
-      this.$emit("onClick");
+  computed: {
+    computedHref() {
+      return this.disabled || this.loading ? undefined : this.href;
     }
   }
 }));
-;// CONCATENATED MODULE: ./src/components/button/button.vue?vue&type=script&lang=ts
- /* harmony default export */ var button_buttonvue_type_script_lang_ts = (buttonvue_type_script_lang_ts); 
+;// CONCATENATED MODULE: ./src/components/button/Button.vue?vue&type=script&lang=ts
+ /* harmony default export */ var button_Buttonvue_type_script_lang_ts = (Buttonvue_type_script_lang_ts); 
 ;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -216,7 +223,7 @@ function normalizeComponent(
   }
 }
 
-;// CONCATENATED MODULE: ./src/components/button/button.vue
+;// CONCATENATED MODULE: ./src/components/button/Button.vue
 
 
 
@@ -225,7 +232,7 @@ function normalizeComponent(
 /* normalize component */
 ;
 var component = normalizeComponent(
-  button_buttonvue_type_script_lang_ts,
+  button_Buttonvue_type_script_lang_ts,
   render,
   staticRenderFns,
   false,
@@ -235,7 +242,7 @@ var component = normalizeComponent(
   
 )
 
-/* harmony default export */ var button_button = (component.exports);
+/* harmony default export */ var Button = (component.exports);
 ;// CONCATENATED MODULE: ./src/style/index.scss
 // extracted by mini-css-extract-plugin
 
@@ -243,7 +250,7 @@ var component = normalizeComponent(
 
 
 const components = {
-  Button: button_button
+  Button: Button
 };
 /* harmony default export */ var src_0 = ({
   install: (Vue, options) => {
