@@ -1,0 +1,92 @@
+<template>
+  <a
+    v-if="href"
+    v-bind="$attrs"
+    :href="computedHref"
+    :disabled="disabled"
+    :class="[
+      'raven-btn',
+      `raven-btn-size-${size}`,
+      `raven-btn-variant-${variant}`,
+      { 'raven-btn-rounded': rounded, 'raven-btn-active': active },
+    ]"
+  >
+    <slot name="prepend"></slot>
+    <slot>{{ label }}</slot>
+    <slot name="append"></slot>
+  </a>
+  <button
+    v-else
+    v-bind="$attrs"
+    :disabled="disabled"
+    :class="[
+      'raven-btn',
+      `raven-btn-size-${size}`,
+      `raven-btn-variant-${variant}`,
+      { 'raven-btn-rounded': rounded, 'raven-btn-active': active },
+    ]"
+  >
+    <slot name="prepend"></slot>
+    <slot>{{ label }}</slot>
+    <slot name="append"></slot>
+  </button>
+</template>
+
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "Button",
+  props: {
+    label: {
+      type: String,
+    },
+    variant: {
+      type: String,
+      default: "clickthrough",
+      validator: function (value: string) {
+        return (
+          [
+            "clickthrough",
+            "negative",
+            "attention",
+            "success",
+            "ghost",
+            "no-background",
+            "cancel",
+            "action",
+            "selector",
+          ].indexOf(value) !== -1
+        );
+      },
+    },
+    size: {
+      type: String,
+      default: "medium",
+      validator: function (value: string) {
+        return ["tiny", "small", "medium"].indexOf(value) !== -1;
+      },
+    },
+    rounded: {
+      type: Boolean,
+    },
+    active: {
+      type: Boolean,
+    },
+    disabled: {
+      type: Boolean,
+    },
+    loading: {
+      type: Boolean,
+    },
+    href: {
+      type: String,
+    },
+  },
+  computed: {
+    computedHref() {
+      return this.disabled || this.loading ? undefined : this.href;
+    },
+  },
+});
+</script>
