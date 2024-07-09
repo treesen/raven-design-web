@@ -27,13 +27,14 @@ export const Radius: Story = {
     `,
   }),
 };
-export const Active: Story = {
+export const Status: Story = {
   render: () => ({
     components: { Button },
     template: `
     <div class="component-wapper">
+      <Button label="Normal" />
       <Button active label="Active" />
-      <Button label="normal" />
+      <Button disabled label="Disabled" />
     </div>
     `,
   }),
@@ -64,7 +65,6 @@ export const Variants: Story = {
       <Button variant="ghost" label="ghost" />
       <Button variant="cancel" label="cancel" />
       <Button variant="no-background" label="no-background" />
-      <Button disabled label="disabled" />
     </div>
     `,
   }),
