@@ -4,9 +4,10 @@ a lib of UI components for web
 ## Install
 ```shell
 npm install git+git@github.com:treesen/raven-design-web.git
-
+```
 or install a version
 
+```shell
 npm install git+git@github.com:treesen/raven-design-web.git#v0.1.0
 ```
 
