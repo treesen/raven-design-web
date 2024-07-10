@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue";
 
 import Button from "../components/button/button.vue";
 import ButtonGroup from "../components/button/button-group.vue";
-
+import IconStar from "../components/icon/icon-star-outline.vue";
 const meta: Meta<typeof Button> = {
   component: Button,
   parameters: {
@@ -58,18 +58,81 @@ export const Sizes: Story = {
 };
 export const Variants: Story = {
   render: () => ({
-    components: { Button },
+    components: { Button, IconStar },
     template: `
     <div class="component-wapper">
-      <Button variant="clickthrough" label="clickthrough" href="javascript:void(0)" />
-      <Button variant="negative" label="negative" />
-      <Button variant="action" label="action" />
-      <Button variant="attention" label="attention" />
-      <Button variant="success" label="success" />
-      <Button variant="selector" label="selector" />
-      <Button variant="ghost" label="ghost" />
-      <Button variant="cancel" label="cancel" />
-      <Button variant="no-background" label="no-background" />
+      <Button variant="clickthrough" label="clickthrough" href="javascript:void(0)">
+        <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="negative" label="negative" >
+        <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="action" label="action" >
+              <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="attention" label="attention" >
+              <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="success" label="success" >
+              <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="selector" label="selector" >
+              <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="ghost" label="ghost" >
+              <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="cancel" label="cancel" >
+              <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="no-background" label="no-background">
+              <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
     </div>
     `,
   }),

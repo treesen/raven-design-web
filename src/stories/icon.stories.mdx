@@ -5,7 +5,6 @@ import Icons from "../components/icon/index.ts";
 <Meta title="STORIES/icon"/>
 
 export const Template = (args, { argTypes }) => ({
-  components: { ...Icons },
   props: Object.keys(argTypes),
   data() {
     return {
@@ -14,7 +13,7 @@ export const Template = (args, { argTypes }) => ({
   },
   template: `
       <div class="component-wapper">
-       <component :is="icon" v-for="icon in Icons" :key="icon"/>
+       <component :is="icon" v-for="(icon, name) in Icons" :key="name"/>
       </div>
   `,
 });
@@ -23,7 +22,7 @@ export const Template = (args, { argTypes }) => ({
 
 <Canvas>
   <Story
-    name="variant"
+    name="all"
    >
     {Template.bind({})}
   </Story>
