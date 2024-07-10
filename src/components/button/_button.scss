@@ -125,6 +125,10 @@
     }
 }
 
+// .raven-btn.raven-btn-variant-plain {
+//     @include theme( --shape, --plainStill, --plainStill, --plainStill);
+// }
+
 
 .raven-btn[disabled] {
     &,&:hover,&,:active {

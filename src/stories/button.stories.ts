@@ -81,10 +81,10 @@ export const Group: Story = {
     template: `
     <div class="component-wapper">
       <ButtonGroup>
-        <Button rounded label="<" />
-        <Button label="1" />
-        <Button label="2" />
-        <Button rounded label=">" />
+        <Button size="small" rounded label="<" />
+        <Button size="small" label="1" />
+        <Button size="small" label="2" />
+        <Button size="small" rounded label=">" />
       </ButtonGroup>
     </div>
     `,

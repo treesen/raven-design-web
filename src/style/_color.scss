@@ -18,7 +18,7 @@
 	--null: #F1F1F1;
 	--shadyGray-shape: #555557;
 	--navyOnBlue: #0058CC;
-	--sneakPeak-shape: rgba(0, 0, 0, 0.30);
+	--sneakPeak-shape: rgb(0 0 0 / 0.30);
 	/* accent */
 	--priAccent-fill: #FAFAFA;
 	--actionAccent: #2671D4;
@@ -59,8 +59,8 @@
 	--attentionActive: #FF8700;
 	--cancelStill: #FFF;
 	--cancelHover: #EBEBEB;
-	--ghostStill: rgba(255, 255, 255, 0.60);
-	--ghostHover: rgba(255, 255, 255, 0.80);
+	--ghostStill: rgb(255 255 255 / 0.60);
+	--ghostHover: rgb(255 255 255 / 0.80);
 	--ghostActive: #FFF;
 	--plainStill: #F9F9F9;
 	--plainHover: #F1F1F1;
@@ -83,7 +83,7 @@
 	--solid-remark: #7B8794;
 	--solid-pri: #3C3C3C;
 	--solid-sec-shape-light: #CBD2D9;
-	--solidOverlay-white: rgba(255, 255, 255, 0.60);
+	--solidOverlay-white: rgb(255 255 255 / 0.60);
 	--solid-Gray: #919193;
 	/* backdrops */
 	--contrastBg: #FFF;
@@ -99,7 +99,7 @@
 	--lightNavy: #E0EBF9;
 	--lightNight: #F2F7FF;
 	--invertNight: #FFF;
-	--overlayBg: #rgba(0, 0, 0, 0.60);
+	--overlayBg: rgb(0 0 0 / 0.60);
 	--grayBg: #F0F0F2;
 	--lightGray: #F8F8FA;
 	--gog-grayOnGray: #D5D5D7;
@@ -124,7 +124,7 @@
 	--null: #9E9E9E;
 	--shadyGray-shape: #F0F0F2;
 	--navyOnBlue: #E0EBF9;
-	--sneakPeak-shape: rgba(255, 255, 255, 0.30);
+	--sneakPeak-shape: rgb(255 255 255 / 0.30);
 	/* accent */
 	--priAccent-fill: #272727;
 	--actionAccent: #2671D4;
@@ -165,8 +165,8 @@
 	--attentionActive: #FBDB39;
 	--cancelStill: #1A1A1A;
 	--cancelHover: #363636;
-	--ghostStill: rgba(255, 255, 255, 0.60);
-	--ghostHover: rgba(255, 255, 255, 0.80);
+	--ghostStill: rgb(255 255 255 / 0.60);
+	--ghostHover: rgb(255 255 255 / 0.80);
 	--ghostActive: #3C3C3C;
 	--plainStill: #272727;
 	--plainHover: #3E4C59;
@@ -189,7 +189,7 @@
 	--solid-remark: #7B8794;
 	--solid-pri: #3C3C3C;
 	--solid-sec-shape-light: #CBD2D9;
-	--solidOverlay-white: rgba(255, 255, 255, 0.60);
+	--solidOverlay-white: rgb(255 255 255 / 0.60);
 	--solid-Gray: #919193;
 	/* backdrops */
 	--contrastBg: #1A1A1A;
@@ -205,7 +205,7 @@
 	--lightNavy: #003C6B;
 	--lightNight: #0B2074;
 	--invertNight: #132F85;
-	--overlayBg: #rgba(255, 255, 255, 0.30);
+	--overlayBg: rgb(255 255 255 / 0.30);
 	--grayBg: #555557;
 	--lightGray: #373739;
 	--gog-grayOnGray: #373739;
