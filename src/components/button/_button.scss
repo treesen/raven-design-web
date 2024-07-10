@@ -15,7 +15,7 @@
     }
 
     svg {
-        fill: var(--shape-reverse);
+        fill: currentColor;
     }
 
     &:focus-visible {
@@ -124,11 +124,6 @@
         outline: 4px solid var(--selectorAccent);
     }
 }
-
-// .raven-btn.raven-btn-variant-plain {
-//     @include theme( --shape, --plainStill, --plainStill, --plainStill);
-// }
-
 
 .raven-btn[disabled] {
     &,&:hover,&,:active {
