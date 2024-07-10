@@ -18,3 +18,7 @@ import Raven from "raven-design-web";
 import 'raven-design-web/dist/raven-design-web.css'
 
 Vue.use(Raven)
+```
+
+
+For storybook, please refer to [Raven-Design](https://treesen.github.io/raven-design-web/?path=/docs/guidance--docs).
