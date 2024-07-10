@@ -63,7 +63,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=8d060e14
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=1233f809
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.href)?_c('a',_vm._b({class:[
     'raven-btn',
     ("raven-btn-size-" + _vm.size),
@@ -92,40 +92,26 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
 /* harmony default export */ var buttonvue_type_script_lang_ts = (external_commonjs_vue_commonjs2_vue_root_Vue_default().extend({
   name: "Button",
   props: {
-    label: {
-      type: String
-    },
+    label: String,
+    rounded: Boolean,
+    active: Boolean,
+    disabled: Boolean,
+    loading: Boolean,
+    block: Boolean,
+    href: String,
     variant: {
       type: String,
       default: "clickthrough",
       validator: function (value) {
-        return ["clickthrough", "negative", "attention", "success", "ghost", "no-background", "cancel", "action", "selector"].indexOf(value) !== -1;
+        return ["clickthrough", "negative", "attention", "success", "ghost", "no-background", "cancel", "action", "selector"].includes(value);
       }
     },
     size: {
       type: String,
       default: "medium",
       validator: function (value) {
-        return ["tiny", "small", "medium"].indexOf(value) !== -1;
+        return ["tiny", "small", "medium"].includes(value);
       }
-    },
-    rounded: {
-      type: Boolean
-    },
-    active: {
-      type: Boolean
-    },
-    disabled: {
-      type: Boolean
-    },
-    loading: {
-      type: Boolean
-    },
-    block: {
-      type: Boolean
-    },
-    href: {
-      type: String
     }
   },
   computed: {
@@ -267,6 +253,7 @@ var component = normalizeComponent(
 // extracted by mini-css-extract-plugin
 
 ;// CONCATENATED MODULE: ./src/index.ts
+
 
 
 const components = {

@@ -13,7 +13,9 @@
     "build": "vue-cli-service build --target lib --name raven-design-web src/index.ts",
     "lint": "vue-cli-service lint --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --output-dir docs"
+    "build-storybook": "storybook build --output-dir docs",
+    "prebuild": "npm run gen-icon && npm run lint",
+    "gen-icon": "node ./scripts/icon/gen-icon-components.js"
   },
   "peerDependencies": {
     "core-js": "^3.8.3",
@@ -21,9 +23,6 @@
     "vue-class-component": "^7.2.3"
   },
   "devDependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^2.6.14",
-    "vue-class-component": "^7.2.3",
     "@storybook/addon-essentials": "^7.6.20",
     "@storybook/addon-interactions": "^7.6.20",
     "@storybook/addon-links": "^7.6.20",
@@ -31,6 +30,7 @@
     "@storybook/test": "^7.6.20",
     "@storybook/vue": "^7.6.20",
     "@storybook/vue-webpack5": "^7.6.20",
+    "@types/fs-extra": "^11.0.4",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -41,11 +41,14 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
     "ajv": "^7.2.4",
+    "core-js": "^3.8.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-storybook": "^0.8.0",
     "eslint-plugin-vue": "^8.0.3",
+    "fs-extra": "^11.2.0",
+    "jsdom": "^24.1.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "react": "^18.3.1",
@@ -54,7 +57,10 @@
     "sass-loader": "^12.0.0",
     "storybook": "^7.6.20",
     "storybook-dark-mode": "^4.0.2",
+    "svgo": "^3.3.2",
     "typescript": "~4.5.5",
+    "vue": "^2.6.14",
+    "vue-class-component": "^7.2.3",
     "vue-loader": "^15.11.1",
     "vue-template-compiler": "^2.6.14"
   },

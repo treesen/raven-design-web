@@ -1,0 +1,30 @@
+
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import Icons from "../components/icon/index.ts";
+
+<Meta title="STORIES/icon"/>
+
+export const Template = (args, { argTypes }) => ({
+  components: { ...Icons },
+  props: Object.keys(argTypes),
+  data() {
+    return {
+      Icons
+    }
+  },
+  template: `
+      <div class="component-wapper">
+       <component :is="icon" v-for="icon in Icons" :key="icon"/>
+      </div>
+  `,
+});
+
+# ICON
+
+<Canvas>
+  <Story
+    name="variant"
+   >
+    {Template.bind({})}
+  </Story>
+</Canvas>
