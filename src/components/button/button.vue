@@ -50,9 +50,13 @@ import Vue from "vue";
 export default Vue.extend({
   name: "Button",
   props: {
-    label: {
-      type: String,
-    },
+    label: String,
+    rounded: Boolean,
+    active: Boolean,
+    disabled: Boolean,
+    loading: Boolean,
+    block: Boolean,
+    href: String,
     variant: {
       type: String,
       default: "clickthrough",
@@ -76,24 +80,6 @@ export default Vue.extend({
       validator: function (value: string) {
         return ["tiny", "small", "medium"].includes(value);
       },
-    },
-    rounded: {
-      type: Boolean,
-    },
-    active: {
-      type: Boolean,
-    },
-    disabled: {
-      type: Boolean,
-    },
-    loading: {
-      type: Boolean,
-    },
-    block: {
-      type: Boolean,
-    },
-    href: {
-      type: String,
     },
   },
   computed: {
