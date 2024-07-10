@@ -57,26 +57,24 @@ export default Vue.extend({
       type: String,
       default: "clickthrough",
       validator: function (value: string) {
-        return (
-          [
-            "clickthrough",
-            "negative",
-            "attention",
-            "success",
-            "ghost",
-            "no-background",
-            "cancel",
-            "action",
-            "selector",
-          ].indexOf(value) !== -1
-        );
+        return [
+          "clickthrough",
+          "negative",
+          "attention",
+          "success",
+          "ghost",
+          "no-background",
+          "cancel",
+          "action",
+          "selector",
+        ].includes(value);
       },
     },
     size: {
       type: String,
       default: "medium",
       validator: function (value: string) {
-        return ["tiny", "small", "medium"].indexOf(value) !== -1;
+        return ["tiny", "small", "medium"].includes(value);
       },
     },
     rounded: {
