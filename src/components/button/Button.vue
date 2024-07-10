@@ -8,9 +8,15 @@
       'raven-btn',
       `raven-btn-size-${size}`,
       `raven-btn-variant-${variant}`,
-      { 'raven-btn-rounded': rounded, 'raven-btn-active': active },
+      {
+        'raven-btn-rounded': rounded,
+        'raven-btn-active': active,
+        'raven-btn-block': block,
+      },
     ]"
+    @click="onClick"
   >
+    <!-- TODO: loading icon -->
     <slot name="prepend"></slot>
     <slot>{{ label }}</slot>
     <slot name="append"></slot>
@@ -23,9 +29,15 @@
       'raven-btn',
       `raven-btn-size-${size}`,
       `raven-btn-variant-${variant}`,
-      { 'raven-btn-rounded': rounded, 'raven-btn-active': active },
+      {
+        'raven-btn-rounded': rounded,
+        'raven-btn-active': active,
+        'raven-btn-block': block,
+      },
     ]"
+    @click="onClick"
   >
+    <!-- TODO: loading icon -->
     <slot name="prepend"></slot>
     <slot>{{ label }}</slot>
     <slot name="append"></slot>
@@ -79,6 +91,9 @@ export default Vue.extend({
     loading: {
       type: Boolean,
     },
+    block: {
+      type: Boolean,
+    },
     href: {
       type: String,
     },
@@ -86,6 +101,15 @@ export default Vue.extend({
   computed: {
     computedHref() {
       return this.disabled || this.loading ? undefined : this.href;
+    },
+  },
+  methods: {
+    onClick(evt: MouseEvent) {
+      if (this.disabled || this.loading || this.active) {
+        evt.preventDefault();
+        return;
+      }
+      this.$emit("click", evt);
     },
   },
 });

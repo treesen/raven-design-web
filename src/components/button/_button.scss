@@ -7,6 +7,12 @@
     line-height: 1.5;
     font-weight: 500;
     border: 1px solid var(--ctStill);
+    user-select: none;
+
+    &.raven-btn-block {
+        display: flex;
+        width: 100%;
+    }
 
     svg {
         fill: var(--shape-reverse);

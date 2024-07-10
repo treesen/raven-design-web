@@ -4,6 +4,8 @@ import "../src/style/index.scss";
 
 const preview: Preview = {
   parameters: {
+    layout: 'centered',
+    actions: { argTypesRegex: '(click)|(change)' },
     darkMode: {
       current: 'dark',
       dark: { ...themes.dark, appBg: '#1B1C1D' },

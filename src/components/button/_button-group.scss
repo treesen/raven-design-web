@@ -1,0 +1,16 @@
+.raven-btn-group {
+    display: inline-flex;
+    *:not(.raven-btn) {
+        display: none;
+    }
+    .raven-btn:not(:first-of-type) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .raven-btn:not(:last-of-type) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        border-right: 1px solid #fff;
+    }
+}

@@ -1,6 +1,6 @@
 import _Vue from "vue";
 import { PluginOptions } from "../types/index";
-import Button from "./components/button/Button.vue";
+import Button from "./components/button/button.vue";
 import "./style/index.scss";
 
 const components: Record<string, typeof Button> = {
