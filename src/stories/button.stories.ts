@@ -46,12 +46,33 @@ export const Status: Story = {
 };
 export const Sizes: Story = {
   render: () => ({
-    components: { Button },
+    components: { Button, IconStar },
     template: `
     <div class="component-wapper">
-      <Button size="medium" label="Medium" />
-      <Button size="small" label="Small" />
-      <Button size="tiny" label="Tiny" />
+      <Button size="medium" label="Medium" >
+                          <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button size="small" label="Small" >
+                          <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button size="tiny" label="Tiny" >
+                    <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
     </div>
     `,
   }),
