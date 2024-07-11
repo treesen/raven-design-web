@@ -73,6 +73,7 @@ export default Vue.extend({
           "cancel",
           "action",
           "selector",
+          "plain",
         ].includes(value);
       },
     },

@@ -10,6 +10,7 @@
     "types"
   ],
   "scripts": {
+    "only-build": "vue-cli-service build --target lib --name raven-design-web src/index.ts",
     "build": "vue-cli-service build --target lib --name raven-design-web src/index.ts",
     "lint": "vue-cli-service lint --fix",
     "storybook": "storybook dev -p 6006",
