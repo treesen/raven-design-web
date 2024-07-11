@@ -105,7 +105,7 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=1233f809
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/button/button.vue?vue&type=template&id=6bf8dc4a
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.href)?_c('a',_vm._b({class:[
     'raven-btn',
     ("raven-btn-size-" + _vm.size),
@@ -143,9 +143,9 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
     href: String,
     variant: {
       type: String,
-      default: "clickthrough",
+      default: "primary",
       validator: function (value) {
-        return ["clickthrough", "negative", "attention", "success", "ghost", "no-background", "cancel", "action", "selector"].includes(value);
+        return ["primary", "secondary", "tertiary", "negative", "attention", "success", "ghost", "no-background", "cancel", "action", "selector"].includes(value);
       }
     },
     size: {

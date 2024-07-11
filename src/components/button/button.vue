@@ -59,10 +59,12 @@ export default Vue.extend({
     href: String,
     variant: {
       type: String,
-      default: "clickthrough",
+      default: "primary",
       validator: function (value: string) {
         return [
-          "clickthrough",
+          "primary",
+          "secondary",
+          "tertiary",
           "negative",
           "attention",
           "success",

@@ -83,8 +83,29 @@
     }
 }
 
-.raven-btn.raven-btn-variant-clickthrough {
+.raven-btn.raven-btn-variant-primary {
     @include theme(--shape-reverse, --ctStill, --ctHover, --ctActive);
+}
+.raven-btn.raven-btn-variant-secondary {
+    @include theme(--ctStill, --transparent, --transparent, --transparent);
+    border-color: var(--ctStill);
+    &:hover {
+        color: var(--ctHover);
+        border-color: var(--ctHover); 
+    }
+    &:active, &.raven-btn-active  {
+        color: var(--ctActive);
+        border-color: var(--ctActive); 
+    }
+}
+.raven-btn.raven-btn-variant-tertiary {
+    @include theme(--pri-shape, --null, --null, --null);
+    &:hover {
+        color: var(--ctHover);
+    }
+    &:active, &.raven-btn-active  {
+        color: var(--ctActive);
+    }
 }
 .raven-btn.raven-btn-variant-negative {
     @include theme(--shape-reverse, --negativeStill,  --negativeHover, --negativeHover);

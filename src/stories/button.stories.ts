@@ -77,7 +77,23 @@ export const Variants: Story = {
     components: { Button, IconStar },
     template: `
     <div class="component-wapper">
-      <Button variant="clickthrough" label="clickthrough" href="javascript:void(0)">
+      <Button variant="primary" label="primary" href="javascript:void(0)">
+        <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="secondary" label="secondary" >
+        <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
+      <Button variant="tertiary" label="tertiary" >
         <template #prepend>
           <IconStar/>
         </template>
