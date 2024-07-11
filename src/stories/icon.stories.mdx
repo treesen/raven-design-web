@@ -1,21 +1,46 @@
 
 import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
 import Icons from "../components/icon/index.ts";
+import Icon from "../components/icon/icon.vue";
 
 <Meta title="STORIES/icon"/>
 
 export const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
+  components: { Icon },
   data() {
     return {
-      Icons
+      Icons,
+      search: ''
     }
   },
-  template: `
+  template: `<div>
+      <input v-model="search" placeholder="Search"/>
       <div class="component-wapper">
-       <component :is="icon" v-for="(icon, name) in Icons" :key="name"/>
+       <div v-for="(icon, name) in filteredIcons" :key="name" class="h-item">
+        <Icon :icon="name" style="height:36px;width:36px"/>
+        <div style="font-size:10px">{{name}}</div>
+       </div>
       </div>
+  </div>
   `,
+  computed: {
+    filteredIcons() {
+      if (!this.search.trim()) {
+        return this.Icons
+      }
+      const icons = {}
+      for (const name in this.Icons) {
+        if (Object.prototype.hasOwnProperty.call(this.Icons, name)) {
+          const icon = this.Icons[name];
+          if (name.toLowerCase().indexOf(this.search.toLowerCase()) > -1) {
+            icons[name] = icon
+          }
+        }
+      }
+      return icons
+    }
+  },
 });
 
 # ICON
@@ -23,6 +48,9 @@ export const Template = (args, { argTypes }) => ({
 <Canvas>
   <Story
     name="all"
+    parameters={{
+      layout: "padded",
+    }}
    >
     {Template.bind({})}
   </Story>
