@@ -1,19 +1,24 @@
 import type { StorybookConfig } from "@storybook/vue-webpack5";
 
 const config: StorybookConfig = {
-  staticDirs: [{from: '../src/fonts', to: '/fonts'},{from: '../src/stories/assets', to: '/assets'}],
+  staticDirs: [
+    { from: "../src/fonts", to: "/fonts" },
+    { from: "../src/stories/assets", to: "/assets" },
+  ],
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     // "@storybook/addon-interactions",
     {
-      name: '@storybook/addon-essentials',
+      name: "@storybook/addon-essentials",
       options: {
         backgrounds: false,
         actions: false,
       },
     },
     "storybook-dark-mode",
+    "@storybook/addon-a11y",
+    // "@storybook/addon-storysource",
   ],
   framework: {
     name: "@storybook/vue-webpack5",
@@ -34,11 +39,11 @@ const config: StorybookConfig = {
         "css-loader",
         {
           loader: "sass-loader",
-          options: { implementation: require.resolve("sass") }
+          options: { implementation: require.resolve("sass") },
         },
       ],
-    },)
-    return config
+    });
+    return config;
   },
 };
 

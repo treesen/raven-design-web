@@ -23,9 +23,11 @@
     "vue-class-component": "^7.2.3"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.20",
     "@storybook/addon-essentials": "^7.6.20",
     "@storybook/addon-interactions": "^7.6.20",
     "@storybook/addon-links": "^7.6.20",
+    "@storybook/addon-storysource": "^7.6.20",
     "@storybook/blocks": "^7.6.20",
     "@storybook/test": "^7.6.20",
     "@storybook/vue": "^7.6.20",

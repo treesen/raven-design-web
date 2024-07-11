@@ -5,11 +5,6 @@ import ButtonGroup from "../components/button/button-group.vue";
 import IconStar from "../components/icon/icon-star-outline.vue";
 const meta: Meta<typeof Button> = {
   component: Button,
-  parameters: {
-    docs: {
-      controls: { exclude: ["style"] },
-    },
-  },
 };
 
 export default meta;
