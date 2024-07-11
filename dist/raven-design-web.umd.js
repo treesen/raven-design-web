@@ -291,6 +291,41 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var button_button = (component.exports);
+;// CONCATENATED MODULE: ./node_modules/@vue/vue-loader-v15/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/icon/icon.vue?vue&type=template&id=5c8cf580
+var iconvue_type_template_id_5c8cf580_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.icon)?_c(_vm.icon,{tag:"component"}):_vm._e()}
+var iconvue_type_template_id_5c8cf580_staticRenderFns = []
+
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/@vue/cli-plugin-typescript/node_modules/babel-loader/lib/index.js!./node_modules/ts-loader/index.js??clonedRuleSet-83.use[2]!./node_modules/@vue/vue-loader-v15/lib/index.js??vue-loader-options!./src/components/icon/icon.vue?vue&type=script&lang=ts
+
+/* harmony default export */ var iconvue_type_script_lang_ts = (external_commonjs_vue_commonjs2_vue_root_Vue_default().extend({
+  name: "Icon",
+  props: {
+    icon: String
+  }
+}));
+;// CONCATENATED MODULE: ./src/components/icon/icon.vue?vue&type=script&lang=ts
+ /* harmony default export */ var icon_iconvue_type_script_lang_ts = (iconvue_type_script_lang_ts); 
+;// CONCATENATED MODULE: ./src/components/icon/icon.vue
+
+
+
+
+
+/* normalize component */
+;
+var icon_component = normalizeComponent(
+  icon_iconvue_type_script_lang_ts,
+  iconvue_type_template_id_5c8cf580_render,
+  iconvue_type_template_id_5c8cf580_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var icon = (icon_component.exports);
 ;// CONCATENATED MODULE: ./src/style/index.scss
 // extracted by mini-css-extract-plugin
 
@@ -298,8 +333,10 @@ var component = normalizeComponent(
 
 
 
+
 const components = {
-  Button: button_button
+  Button: button_button,
+  Icon: icon
 };
 /* harmony default export */ var src_0 = ({
   install: (Vue, options) => {

@@ -5,7 +5,7 @@ import Icon from "./components/icon/icon.vue";
 import "./style/index.scss";
 import "./components/icon";
 
-const components: Record<string, typeof Button> = {
+const components: Record<string, typeof _Vue> = {
   Button,
   Icon,
 };
