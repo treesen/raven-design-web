@@ -165,6 +165,14 @@ export const Variants: Story = {
           <IconStar/>
         </template>
       </Button>
+      <Button variant="plain" label="plain">
+              <template #prepend>
+          <IconStar/>
+        </template>
+        <template #append>
+          <IconStar/>
+        </template>
+      </Button>
     </div>
     `,
   }),

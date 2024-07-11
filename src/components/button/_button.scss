@@ -158,6 +158,10 @@
     }
 }
 
+.raven-btn.raven-btn-variant-plain {
+    @include theme( --shape, --plainStill, --plainHover, --plainActive);
+}
+
 .raven-btn[disabled] {
     &,&:hover,&,:active {
         cursor: not-allowed;
